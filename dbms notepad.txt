@@ -1,0 +1,47 @@
+SQL*Plus: Release 11.2.0.4.0 Production on Tue Jan 13 11:30:55 2026
+
+Copyright (c) 1982, 2013, Oracle.  All rights reserved.
+
+Enter user-name: system
+Enter password:
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+SQL> create user a2 identified by sit;
+
+User created.
+
+SQL> grant connect, resource to a2;
+
+Grant succeeded.
+
+SQL> alter user a2 identified by NEW_PASSWORD;
+alter user a2 identified by NEW_PASSWORD
+              *
+ERROR at line 1:
+ORA-00922: missing or invalid option
+
+
+SQL> alter user a2 identified by NEW_PASSORD;
+
+User altered.
+
+SQL> alter user a2 identified by Active@123;
+alter user a2 identified by Active@123
+                                  *
+ERROR at line 1:
+ORA-00922: missing or invalid option
+
+
+SQL> alter user a2 identified by active123;
+
+User altered.
+ 
+SQL> commit;
+
+Commit complete.
+
+SQL>
+
