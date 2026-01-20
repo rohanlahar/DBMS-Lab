@@ -1,0 +1,54 @@
+1. create table st_info (prn, st_name, m1,m2,m3)
+
+CREATE TABLE st_info (
+    prn NUMBER(5),
+    st_name VARCHAR2(30),
+    m1 NUMBER(3),
+    m2 NUMBER(3),
+    m3 NUMBER(3),
+    total NUMBER(3),
+    percentage NUMBER(5,2)
+);
+
+
+2. insert atleast 7 entires into st_info
+
+INSERT INTO st_info (prn, st_name, m1, m2, m3)
+VALUES (1, 'Amit', 78, 85, 90);
+
+INSERT INTO st_info (prn, st_name, m1, m2, m3)
+VALUES (2, 'Neha', 88, 76, 84);
+
+INSERT INTO st_info (prn, st_name, m1, m2, m3)
+VALUES (3, 'Rohit', 65, 70, 72);
+
+INSERT INTO st_info (prn, st_name, m1, m2, m3)
+VALUES (4, 'Pooja', 92, 89, 95);
+
+INSERT INTO st_info (prn, st_name, m1, m2, m3)
+VALUES (5, 'Sanjay', 55, 60, 58);
+
+INSERT INTO st_info (prn, st_name, m1, m2, m3)
+VALUES (6, 'Kiran', 80, 82, 79);
+
+INSERT INTO st_info (prn, st_name, m1, m2, m3)
+VALUES (7, 'Anjali', 90, 88, 91);
+
+
+
+3.cacluate total and percentage
+
+UPDATE st_info
+SET total = m1 + m2 + m3;
+
+UPDATE st_info
+SET percentage = (total / 300) * 100;
+
+
+4.display result of each column
+
+SELECT prn, st_name, m1, m2, m3, total, percentage
+FROM st_info;
+
+
+
