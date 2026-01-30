@@ -552,3 +552,372 @@ CS-006   Project Based Learning                                                 
 
 9 rows selected.
 
+
+SQL> select max(dept_id) from department;
+
+MAX(DEPT_ID)
+------------
+           7
+
+SQL> create sequence emp_id with 1 incremenet by 1;
+create sequence emp_id with 1 incremenet by 1
+                       *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> create table emp(emp_id INT primary key, name varchar2(20));
+
+Table created.
+
+SQL> insert into emp (emp_id, name values (emp_sq.nextval, "1');
+ERROR:
+ORA-01740: missing double quote in identifier
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '2 a');
+insert into emp(emp_id, name) values (emp_sq.nextval, '2 a')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '3 a');
+insert into emp(emp_id, name) values (emp_sq.nextval, '3 a')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '4 A');
+insert into emp(emp_id, name) values (emp_sq.nextval, '4 A')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '5 D');
+insert into emp(emp_id, name) values (emp_sq.nextval, '5 D')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '6 FG');
+insert into emp(emp_id, name) values (emp_sq.nextval, '6 FG')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '7JKH');
+insert into emp(emp_id, name) values (emp_sq.nextval, '7JKH')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '8GHJ');
+insert into emp(emp_id, name) values (emp_sq.nextval, '8GHJ')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '9FGH');
+insert into emp(emp_id, name) values (emp_sq.nextval, '9FGH')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '10 ASDF');
+insert into emp(emp_id, name) values (emp_sq.nextval, '10 ASDF')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, "1');
+ERROR:
+ORA-01740: missing double quote in identifier
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '2 a');
+insert into emp(emp_id, name) values (emp_sq.nextval, '2 a')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '3 a');
+insert into emp(emp_id, name) values (emp_sq.nextval, '3 a')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '4 A');
+insert into emp(emp_id, name) values (emp_sq.nextval, '4 A')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '5 D');
+insert into emp(emp_id, name) values (emp_sq.nextval, '5 D')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '6 FG');
+insert into emp(emp_id, name) values (emp_sq.nextval, '6 FG')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '7JKH');
+insert into emp(emp_id, name) values (emp_sq.nextval, '7JKH')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '8GHJ');
+insert into emp(emp_id, name) values (emp_sq.nextval, '8GHJ')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '9FGH');
+insert into emp(emp_id, name) values (emp_sq.nextval, '9FGH')
+                                      *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> slect * from table;
+SP2-0734: unknown command beginning "slect * fr..." - rest of line ignored.
+SQL> select * from emp;
+
+no rows selected
+
+SQL> create sequence emp_id with 1 incremenet by 1;
+create sequence emp_id with 1 incremenet by 1
+                       *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL>
+SQL> create sequence emp_sq with 1 incremenet by 1;
+create sequence emp_sq with 1 incremenet by 1
+                       *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL>
+SQL> create sequence emp_sq start with 1 incremenet by 1;
+create sequence emp_sq start with 1 incremenet by 1
+                                    *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> create sequence emp_sq start with 1 increment by 1;
+
+Sequence created.
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '1');
+
+1 row created.
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '2 a');
+
+1 row created.
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '3 a');
+
+1 row created.
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '4 A');
+
+1 row created.
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '5 D');
+
+1 row created.
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '6 FG');
+
+1 row created.
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '7JKH');
+
+1 row created.
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '8GHJ');
+
+1 row created.
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '9FGH');
+
+1 row created.
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '10 ASDF');
+
+1 row created.
+
+SQL> DROP SEQUENCE EMP_SQ;
+
+Sequence dropped.
+
+SQL> SELECT MAX(EMP_ID) FROM EMP;
+
+MAX(EMP_ID)
+-----------
+         10
+
+SQL> alter table emp add pincode into not null;
+alter table emp add pincode into not null
+                            *
+ERROR at line 1:
+ORA-00902: invalid datatype
+
+
+SQL> alter table emp add pincode;
+alter table emp add pincode
+                    *
+ERROR at line 1:
+ORA-02263: need to specify the datatype for this column
+
+
+SQL> alter table emp add pincode int;
+
+Table altered.
+
+SQL> insert into emp(emp_id, name) values (emp_sq.nextval, '1 AAA', 44000);
+insert into emp(emp_id, name) values (emp_sq.nextval, '1 AAA', 44000)
+            *
+ERROR at line 1:
+ORA-00913: too many values
+
+
+SQL> insert into emp(emp_id, name, pincode) values (emp_sq.nextval, '1 AAA', 44000);
+insert into emp(emp_id, name, pincode) values (emp_sq.nextval, '1 AAA', 44000)
+                                               *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> insert into emp (emp_id, name, pincode) values (emp_sq.nextval, '1 AAA', 440008);
+insert into emp (emp_id, name, pincode) values (emp_sq.nextval, '1 AAA', 440008)
+                                                *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+SQL> select * from emp;
+
+    EMP_ID NAME                    PINCODE
+---------- -------------------- ----------
+         1 1
+         2 2 a
+         3 3 a
+         4 4 A
+         5 5 D
+         6 6 FG
+         7 7JKH
+         8 8GHJ
+         9 9FGH
+        10 10 ASDF
+
+10 rows selected.
+
+SQL> truncate table emp;
+
+Table truncated.
+
+SQL> DROP COLUMN PINOCDE;
+DROP COLUMN PINOCDE
+     *
+ERROR at line 1:
+ORA-00950: invalid DROP option
+
+
+SQL> DROP COLUMN PINCODE;
+DROP COLUMN PINCODE
+     *
+ERROR at line 1:
+ORA-00950: invalid DROP option
+
+
+SQL> DROP COLUMN pincode;
+DROP COLUMN pincode
+     *
+ERROR at line 1:
+ORA-00950: invalid DROP option
+
+
+SQL> alter table emp;
+alter table emp
+              *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SQL> alter table emp
+  2  DROP COLUMN pincode;
+
+Table altered.
+
+SQL> altyer table emp
+SP2-0734: unknown command beginning "altyer tab..." - rest of line ignored.
+SQL> alter table emp
+  2  add pincode int not null;
+
+Table altered.
+
+SQL> create sequence emp_sq start with 1 increment by 1;
+
+Sequence created.
+
+SQL> insert into emp (emp_id, name, pincode) values (emp_sq.nextval, '1 AAA', 440008);
+
+1 row created.
+
+SQL> select * from emp;
+
+    EMP_ID NAME                    PINCODE
+---------- -------------------- ----------
+         1 1 AAA                    440008
+
+SQL> alter table emp
+  2  rename column name to emp_name;
+
+Table altered.
+
+SQL> select * from emp;
+
+    EMP_ID EMP_NAME                PINCODE
+---------- -------------------- ----------
+         1 1 AAA                    440008
+
+SQL> rename table emp to employee;
+rename table emp to employee
+       *
+ERROR at line 1:
+ORA-00903: invalid table name
+
+
+SQL> rename emp to employee;
+
+Table renamed.
+
+SQL> commit;
+
+Commit complete.
